@@ -1,0 +1,483 @@
+@charset "UTF-8";
+/* 將大部分標籤的預設樣式重製成以下的內容 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 將 body 也就是整體的文字行高預設成 1 */
+body {
+  line-height: 1;
+}
+
+/* 取消項目列表預設的輔助符號 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 隱藏引用標籤預設的引號(部分瀏覽器有) */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 重置引用標籤的偽元素 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* 將表格初始化 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.film__container #film__name, .information__container, header .title__container .ZHtitle__contaitner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #1E646A;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Alata", sans-serif;
+}
+
+.background__line {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: soft-light;
+  opacity: 0.58;
+  z-index: -10;
+}
+.background__line img {
+  width: 100vw;
+  height: 100vh;
+  background-size: s;
+}
+
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
+header .title__container {
+  margin: 145px auto 0vh auto;
+  max-width: 83%;
+  font-weight: 700;
+  font-size: 10rem;
+  color: #D3D6B1;
+}
+header .title__container h1 {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 77px;
+}
+header .title__container .ZHtitle__contaitner {
+  justify-content: flex-start;
+  margin-left: 140px;
+}
+header .title__container .ZHtitle__contaitner h2 {
+  position: relative;
+  top: 0px;
+  width: 100px;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0 16px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+header .title__container .ZHtitle__contaitner .ZHtitle__line {
+  position: relative;
+  top: 0px;
+  width: 3px;
+  height: 30px;
+  background-color: #6AB5B9;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    transform: scale(0.75) translateX(-17%);
+  }
+}
+main {
+  position: relative;
+  margin: 70px 0 200px 0;
+  height: fit-content;
+}
+
+.information__container {
+  width: 95vw;
+  margin: auto;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.select__container {
+  position: relative;
+  font-family: Arial;
+  text-align: center;
+}
+.select__container select {
+  margin: 0 24px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 8px 20px;
+  width: 150px;
+}
+.select__container select option {
+  color: #535353;
+}
+
+@media screen and (max-width: 700px) {
+  .select__container select {
+    margin: 8px 10px;
+    padding: 8px 0px;
+    width: 76px;
+  }
+}
+.symbols {
+  width: 87%;
+  text-align: end;
+  color: white;
+  transform: translateY(24px);
+}
+
+.tableDaily__container {
+  margin-top: 30px;
+  display: block;
+  transform: scale(0.9) translateY(-5.5%);
+}
+
+table {
+  position: relative;
+}
+
+td {
+  vertical-align: middle;
+  text-align: center;
+  background-color: #6AB5B9;
+}
+td p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+}
+
+.tableHeading {
+  position: relative;
+  height: 32px;
+}
+
+#date01 {
+  width: 5vw;
+}
+#date01 p {
+  width: 5vw;
+  font-size: 16px;
+  font-weight: 700;
+  left: -10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#date02 {
+  width: 6vw;
+}
+#date02 p {
+  width: 6vw;
+  position: relative;
+  top: -5px;
+  left: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#date03 {
+  width: 3vw;
+}
+#date03 p {
+  width: 3vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tableCinema {
+  height: 100px;
+}
+
+#cinema {
+  position: relative;
+  width: 8vw;
+}
+#cinema p {
+  width: 6vw;
+  font-size: 16px;
+  font-weight: 700;
+  margin: auto;
+}
+
+#cinema::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 0;
+  background-color: #fff;
+  left: 0;
+}
+
+#cinema::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 110%;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+#block {
+  position: relative;
+  width: 3vw;
+}
+
+#block::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+#block:nth-child(odd)::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 110%;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+#block:nth-last-child(1)::after {
+  display: none;
+}
+
+#block:nth-child(even)::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 105%;
+  right: -1px;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.film__container {
+  position: absolute;
+  width: 0;
+  z-index: 3;
+}
+.film__container .film {
+  position: absolute;
+  background-color: #D3D6B1;
+  border-radius: 8px;
+  margin: 0;
+  padding: 0;
+  top: 65px;
+  height: 70px;
+  font-size: 0.5rem;
+}
+.film__container p {
+  margin: 6px 6px 0 6px;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.film__container #film__name {
+  justify-content: space-between;
+}
+.film__container #film__name a {
+  position: relative;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+.film__container #film__name a:hover::before {
+  width: 100%;
+}
+.film__container #film__name a::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  bottom: -4px;
+  width: 0%;
+  height: 4px;
+  background-color: #adb36e;
+  transition-duration: 0.3s;
+}
+.film__container #film__name .film__fav {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+.film__container #film__name .film__fav.active {
+  color: #EA5136;
+}
+.film__container #film__time {
+  font-size: 0.5rem;
+  font-weight: 300;
+}
+
+.timeline__error {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 10vh;
+  display: none;
+}
+.timeline__error h1 {
+  text-align: center;
+  font-size: 84px;
+}
+.timeline__error.active {
+  display: block;
+}
+
+@media screen and (max-width: 750px) {
+  .timeline__error h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .timeline__error {
+    margin: 40px;
+  }
+  .timeline__error h1 {
+    font-size: 22px;
+  }
+}/*# sourceMappingURL=style.css.map */
