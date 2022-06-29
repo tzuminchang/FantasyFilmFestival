@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/* 將大部分標籤的預設樣式重製成以下的內容 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 將 body 也就是整體的文字行高預設成 1 */
+body {
+  line-height: 1;
+}
+
+/* 取消項目列表預設的輔助符號 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 隱藏引用標籤預設的引號(部分瀏覽器有) */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 重置引用標籤的偽元素 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* 將表格初始化 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.main, header .title__container .ZHtitle__contaitner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #1E646A;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Alata", sans-serif;
+}
+
+.background__line {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  mix-blend-mode: soft-light;
+  opacity: 0.58;
+  z-index: -10;
+}
+.background__line img {
+  width: 100vw;
+  height: 100vh;
+  background-size: s;
+}
+
+.background__tail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  z-index: -5;
+}
+.background__tail img {
+  position: relative;
+  width: 20vw;
+  bottom: -20vh;
+  animation: float infinite 5s;
+  animation-timing-function: ease;
+  filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-1vh);
+  }
+  50% {
+    transform: translateY(1vh);
+  }
+  100% {
+    transform: translateY(-1vh);
+  }
+}
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
+header .title__container {
+  margin: 140px auto 160px auto;
+  max-width: 1200px;
+  width: 80%;
+  color: #D3D6B1;
+}
+header .title__container h1 {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 77px;
+}
+header .title__container .ZHtitle__contaitner {
+  justify-content: flex-start;
+  height: 0px;
+}
+header .title__container .ZHtitle__contaitner h2 {
+  position: relative;
+  top: 100px;
+  width: 30px;
+  margin: 0 16px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+header .title__container .ZHtitle__contaitner .ZHtitle__line {
+  position: relative;
+  top: 100px;
+  width: 3px;
+  height: 190px;
+  background-color: #6AB5B9;
+}
+header .title__container #ENtitle_2 {
+  position: relative;
+  left: 150px;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    transform: scale(0.75) translateX(-17%);
+  }
+}
+.main {
+  flex-direction: column;
+  justify-content: flex-start;
+  font-weight: 700;
+  color: #D3D6B1;
+  margin: 200px 10vw;
+  height: fit-content;
+}
+.main .ticketInfo__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  background-color: #6AB5B9;
+  padding: 22px 15px;
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
+.main .ticketInfo__container li {
+  cursor: pointer;
+}
+.main .ticketInfo__container h3 {
+  position: relative;
+  font-size: 20px;
+  color: #FFFFFF;
+  font-weight: 500;
+  padding-left: 36px;
+}
+.main .ticketInfo__container h3::before {
+  content: "＋";
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  color: #D3D6B1;
+  transition: all 0.5s ease-in-out;
+}
+.main .ticketInfo__container .ticketInfo__content {
+  margin-top: 15px;
+  display: flex;
+  margin-left: 56px;
+}
+.main .ticketInfo__container .ticketInfo__content .ticketInfo__line {
+  width: 3px;
+  height: auto;
+  margin-right: 10px;
+  background-color: #D3D6B1;
+}
+.main .ticketInfo__container .ticketInfo__content p {
+  flex: 1;
+  color: #FFFFFF;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 16px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+.main .ticketInfo__container .ticketInfo__content p .span_blue {
+  font-weight: 700;
+  color: #4D3CCD;
+}
+.main .ticketInfo__container .ticketInfo__content p .span_red {
+  color: #EA5136;
+}
+.main .ticketInfo__container li.active h3::before {
+  transform: rotate(45deg);
+}/*# sourceMappingURL=style.css.map */

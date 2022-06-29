@@ -1,0 +1,383 @@
+@charset "UTF-8";
+/* 將大部分標籤的預設樣式重製成以下的內容 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 將 body 也就是整體的文字行高預設成 1 */
+body {
+  line-height: 1;
+}
+
+/* 取消項目列表預設的輔助符號 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 隱藏引用標籤預設的引號(部分瀏覽器有) */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 重置引用標籤的偽元素 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* 將表格初始化 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.film #timelineList .timelineList__container, .film, .type__container .type__title > .title__container, .type__container .type__title, .type__container, .main, header .title__container .ZHtitle__contaitner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #1E646A;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Alata", sans-serif;
+}
+
+.background__line {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: soft-light;
+  opacity: 0.58;
+  z-index: -10;
+}
+.background__line img {
+  width: 100vw;
+  height: 100vh;
+  background-size: s;
+}
+
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
+header .title__container {
+  position: relative;
+  margin: 145px auto 0vh auto;
+  width: 85%;
+  font-weight: 700;
+  font-size: 10rem;
+  color: #D3D6B1;
+}
+header .title__container h1 {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 77px;
+}
+header .title__container .ZHtitle__contaitner {
+  justify-content: flex-start;
+  margin-left: 140px;
+}
+header .title__container .ZHtitle__contaitner h2 {
+  position: relative;
+  top: 0px;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0 16px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+header .title__container .ZHtitle__contaitner .ZHtitle__line {
+  position: relative;
+  top: 0px;
+  width: 3px;
+  height: 30px;
+  background-color: #6AB5B9;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    transform: scale(0.75) translateX(-17%);
+  }
+}
+.main {
+  position: relative;
+  flex-direction: column;
+  margin: 50px auto 200px auto;
+  width: 90%;
+  max-width: 1200px;
+  height: fit-content;
+}
+
+.symbols {
+  position: absolute;
+  color: white;
+  top: 20px;
+  right: 0px;
+}
+
+.type__container {
+  width: 100%;
+  margin: 50px 0 20px 0;
+}
+.type__container .type__title {
+  width: 350px;
+  height: 260px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(71, 71, 71, 0.5);
+  transition: 1s background-color;
+}
+.type__container .type__title > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  transition: 0.5s transform;
+}
+.type__container .type__title p {
+  text-align: center;
+}
+.type__container .type__title i {
+  transition: 0.5s transform;
+}
+@media screen and (max-width: 900px) {
+  .type__container .type__title .title__container p {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+.type__container .type__title:hover, .type__container .type__title.active {
+  background-color: rgba(71, 71, 71, 0.2);
+}
+.type__container .type__title:hover > img, .type__container .type__title.active > img {
+  transform: scale(1.1, 1.1);
+}
+.type__container .type__title:hover i, .type__container .type__title.active i {
+  transform: rotateX(180deg);
+}
+.type__container .type__title > .title__container {
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  z-index: 10;
+  font-size: 2rem;
+}
+.type__container .type__line {
+  border: 0.5px solid rgba(255, 255, 255, 0.4);
+  width: 0px;
+  height: 200px;
+  margin: 0 4%;
+}
+
+.film {
+  width: 88vw;
+  max-width: 1200px;
+  border-bottom: 1px solid #FFFFFF;
+}
+.film p {
+  flex: 1;
+  margin: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  line-height: 32px;
+}
+.film p a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0 10px 0 0;
+  transition-duration: 0.3s;
+}
+.film p a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+.film #timelineList {
+  text-align: right;
+  padding: 10px;
+  width: 25%;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.film #timelineList .timelineList__container {
+  background-color: #6AB5B9;
+  margin: 5px;
+  padding: 4px 5px;
+  justify-content: space-between;
+}
+.film #timelineList .timelineList__container span {
+  padding: 0 5px;
+  color: #FFFFFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.film #timelineList .timelineList__container .timelineCinema {
+  flex: 1;
+}
+.film #timelineList .timelineList__container .timelineFav {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
+  font-size: 1.2rem;
+}
+.film #timelineList .timelineList__container .timelineFav.active {
+  color: #EA5136;
+}
+
+@media screen and (max-width: 900px) {
+  .film p {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  .film p a {
+    width: 100%;
+    font-size: 16px;
+  }
+  .film #timelineList {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .film #timelineList {
+    width: fit-content;
+  }
+  .film #timelineList .timelineList__container {
+    flex-wrap: wrap;
+    width: 150px;
+  }
+  .film #timelineList .timelineList__container span {
+    font-size: 14px;
+  }
+  .film #timelineList .timelineList__container span:nth-child(2) {
+    overflow: visible;
+    width: 40%;
+    white-space: nowrap;
+  }
+  .film #timelineList .timelineList__container span:nth-child(3) {
+    overflow: visible;
+    width: fit-content;
+    white-space: nowrap;
+    text-align: left;
+  }
+}/*# sourceMappingURL=style.css.map */

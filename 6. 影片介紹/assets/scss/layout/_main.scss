@@ -1,0 +1,258 @@
+.main {
+	@extend %flex-center;
+	flex-direction: column;
+	color:$color_secondary_white;
+	// border: 1px solid yellow;
+	max-width: 1280px;
+	margin: 0 auto 200px;
+	position: relative;
+	// border: 1px solid red;
+	height: fit-content;
+
+	.intro__circle{
+		position: absolute;
+		top: 48px;
+		left: 5%;
+		background-color: $color_secondary_pink;
+		width: 51px;
+		height: 51px;
+		border-radius: 50%;
+	}
+	.intro{
+		margin-top: 69px;
+		margin-bottom: 40px;
+		padding-top: 21px;
+		width: 85%;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+	}
+
+	.title__container{
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		min-width: 275px;
+	}
+
+	h11{
+		margin-bottom: 7px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.2px;
+	}
+
+	h12{
+		margin-bottom: 7px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	h13{
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 30px;
+		letter-spacing: 0.2px;
+	}
+.property__container{
+	display: flex;
+	flex-wrap: wrap;
+}
+.property__item{
+	margin: 0 0 8px 16px;
+	height: fit-content;
+	@media screen and (max-width: 768px) {
+		margin: 8px 16px 0 0;
+	}
+}
+.property__item__border{
+border: 1px solid $color_secondary_gray;
+border-radius: 10px;
+width: 66px;
+height: 40px;
+@extend %flex-center;
+}
+.intro__text{
+	width: 85%;
+	margin-bottom: 94px;
+}
+h14{
+	font-weight: 400;
+font-size: 16px;
+line-height: 30px;
+letter-spacing: 0.2px;
+}
+.award__container{
+	width: 85%;
+	margin-bottom: 140px;
+}
+h15,h16,h17{
+	color: $color_secondary_golden;
+	line-height: 30px;
+letter-spacing: 0.2px;
+}
+h15{
+font-weight: 400;
+font-size: 20px;
+
+}
+h16{
+	font-weight: 700;
+font-size: 16px;
+
+}
+h17{
+	font-weight: 400;
+font-size: 16px;
+
+}
+.award__text{
+	margin-top: 16px;
+	display: flex;
+}
+.award__item{
+	display: flex;
+	flex-direction: column;
+	margin-right: 56px;
+}
+
+@media screen and (max-width: 768px) {
+	.award__text{
+		flex-wrap: wrap;
+
+	}
+	.award__item{
+		margin: 8px 8px 8px 0;
+	}
+}
+.director__intro{
+	width: 85%;
+	margin-bottom: 112px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	@media screen and (max-width: 768px) {
+		img{
+			margin: auto;
+		}
+	}
+}
+.director__intro__text{
+	width: 70%;
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+}
+h18{
+	font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+letter-spacing: 0.2px;
+margin-bottom: 8px;
+}
+h19{
+	font-weight: 400;
+font-size: 14px;
+line-height: 30px;
+letter-spacing: 0.2px;
+color: $color_secondary_gray;
+}
+.movietime__container{
+	width: 85%;
+	margin-bottom: 172px;
+}
+.movietime__item{
+	width: 100%;
+	background-color: $color_main;
+	// width: 1071px;
+	height: 66px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 16px;
+	.movietime__item__container{
+		width: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		@media screen and (max-width: 768px) {
+			width: 90%;
+		}
+	h2{
+		margin-right: 8px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: 0.05em;
+		color: $color_secondary_black;
+	}
+	.timelineFav{
+		cursor: pointer;
+		color:rgba(0, 0, 0, 0.2);
+		transition-duration: 0.2s;
+		font-size: 1.2rem;
+
+		&.active{
+			color: #EA5136;
+		}
+	}
+}
+}
+
+
+.moremovie__container{
+	width: 85%;
+
+}
+h21{
+	font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+}
+.moremovie__line{
+margin: 8px 0 45px;
+width: 100%;
+height: 1px;
+background-color: $color_secondary_gray;
+}
+.moremovie__item{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.moremovie__item > a{
+	position: relative;
+	margin-left: 48px;
+	*{
+		cursor: pointer;
+	}
+	@media screen and (max-width: 768px) {
+		margin: 8px 0px;
+	}
+
+	&::before{
+		position: absolute;
+		top: -20px;
+		left: 0px;
+		color: #fff;
+		font-size: .8em;
+		background-color: $color_secondary_red;
+		opacity: 0;
+		padding: 5px;
+		border-radius: 5px;
+		content: '連結僅示意';
+		transition-duration: 0.3s;
+	}
+	&:hover{
+		&::before{
+			opacity: 1;
+		}
+	}
+
+}
+}

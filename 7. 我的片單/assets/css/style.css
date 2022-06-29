@@ -1,0 +1,487 @@
+@charset "UTF-8";
+/* 將大部分標籤的預設樣式重製成以下的內容 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 將 body 也就是整體的文字行高預設成 1 */
+body {
+  line-height: 1;
+}
+
+/* 取消項目列表預設的輔助符號 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 隱藏引用標籤預設的引號(部分瀏覽器有) */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 重置引用標籤的偽元素 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* 將表格初始化 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.film__content__container > p, .film__content__container, .favorite__select .favorite__select__button__conatiner .favorite__select__button div, .favorite__select .favorite__select__button__conatiner .favorite__select__button, .favorite__select .favorite__select__button__conatiner .favorite__select__delete, .favorite__select .favorite__select__button__conatiner, .favorite__select__symbols #favSymbolsB, .favorite__select__symbols #favSymbolsR, .favorite__select__symbols, .favorite__select, header .title__container .ZHtitle__contaitner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favTable__time p, .favTable__header p, td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body {
+  background-color: #1E646A;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Alata", sans-serif;
+}
+
+.background__line {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: soft-light;
+  opacity: 0.58;
+  z-index: -10;
+}
+.background__line img {
+  width: 100vw;
+  height: 100vh;
+  background-size: s;
+}
+
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
+header .title__container {
+  position: relative;
+  margin: 145px auto 0vh auto;
+  width: 85%;
+  font-weight: 700;
+  font-size: 10rem;
+  color: #D3D6B1;
+}
+header .title__container h1 {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 77px;
+}
+header .title__container .ZHtitle__contaitner {
+  justify-content: flex-start;
+  margin-left: 140px;
+}
+header .title__container .ZHtitle__contaitner h2 {
+  position: relative;
+  top: 0px;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0 16px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+header .title__container .ZHtitle__contaitner .ZHtitle__line {
+  position: relative;
+  top: 0px;
+  width: 3px;
+  height: 30px;
+  background-color: #6AB5B9;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    transform: scale(0.75) translateX(-17%);
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 70px 0 200px 0;
+  height: fit-content;
+}
+
+.favorite__select {
+  width: 85%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.favorite__select__symbols {
+  flex: 1;
+  justify-content: flex-start;
+}
+.favorite__select__symbols #favSymbolsB, .favorite__select__symbols #favSymbolsR {
+  color: #535353;
+  margin: 6px;
+  border-radius: 8px;
+  width: 110px;
+  height: 30px;
+}
+.favorite__select__symbols #favSymbolsB p, .favorite__select__symbols #favSymbolsR p {
+  font-weight: 700;
+  font-size: 14px;
+}
+.favorite__select__symbols #favSymbolsB {
+  background-color: #D3D6B1;
+  color: black;
+}
+.favorite__select__symbols #favSymbolsR {
+  background-color: #FFE4E6;
+  color: #BE123C;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__delete {
+  background-color: #6AB5B9;
+  width: 110px;
+  height: 30px;
+  border-radius: 8px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.3s;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__delete p {
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__delete:hover {
+  background-color: #4d9fa3;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__button div {
+  background-color: #6AB5B9;
+  margin: 20px 0;
+  height: 30px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__button #before {
+  text-align: center;
+  border-radius: 10px 0 0 10px;
+  width: 28px;
+  transition-duration: 0.3s;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__button #before:hover {
+  background-color: #4d9fa3;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__button #favoriteSelectText {
+  width: 90px;
+  text-align: center;
+  cursor: auto;
+  border: 2px solid #1E646A;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__button #after {
+  text-align: center;
+  border-radius: 0 10px 10px 0;
+  width: 28px;
+  transition-duration: 0.3s;
+}
+.favorite__select .favorite__select__button__conatiner .favorite__select__button #after:hover {
+  background-color: #4d9fa3;
+}
+
+@media screen and (max-width: 500px) {
+  .favorite__select {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .favorite__select .favorite__select__symbols {
+    display: flex;
+    justify-content: space-between;
+  }
+  .favorite__select .favorite__select__symbols #favSymbolsB, .favorite__select .favorite__select__symbols #favSymbolsR {
+    margin: 0;
+  }
+  .favorite__select .favorite__select__button__conatiner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .favorite__select .favorite__select__button__conatiner .favorite__select__delete {
+    margin-left: 0;
+  }
+  .favorite__select .favorite__select__button__conatiner .favorite__select__button {
+    margin-left: 0;
+  }
+}
+.favTable__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  overflow: hidden;
+}
+
+.favTableSlide__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(45vw);
+  transition-duration: 1s;
+}
+
+.favTable__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  background-color: #7eb9bc;
+}
+.favTable__container#favTable__container1 {
+  margin-right: 4vw;
+}
+
+#weekendTable {
+  background-color: #6AB5B9;
+}
+
+table {
+  max-width: 1200px;
+  table-layout: fixed;
+  width: 100px;
+  height: 100px;
+  padding: 0px;
+  margin: 0px;
+}
+
+td {
+  table-layout: fixed;
+  width: 16vw;
+  height: 12vh;
+  padding: 0;
+  box-shadow: inset 0 0 0 0.1px white;
+}
+
+.favTable__header {
+  table-layout: fixed;
+  height: 4vh;
+  padding: 0;
+  text-align: center;
+  color: #FFFFFF;
+}
+.favTable__time {
+  position: relative;
+  table-layout: fixed;
+  width: 6vw;
+  overflow: visible;
+  align-items: center;
+}
+.favTable__time p {
+  position: absolute;
+  top: -0.5rem;
+  margin: 0 10% 0 10%;
+  width: 80%;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #7eb9bc;
+}
+
+.film__container {
+  position: relative;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid black;
+}
+
+.film {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  background-color: #D3D6B1;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
+  width: 9vw;
+  height: 8vh;
+  overflow: hidden;
+}
+.film:hover {
+  z-index: 10;
+  overflow: visible;
+}
+.film.active {
+  background-color: #FFE4E6;
+}
+.film.active a, .film.active span {
+  color: #BE123C;
+}
+.film.active a::before {
+  background-color: #ff7e88;
+}
+
+.film__content__container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 5px;
+  height: 95%;
+  justify-content: flex-start;
+}
+.film__content__container > p {
+  position: relative;
+  margin: 2px 0 10px 0;
+  transition-duration: 0.3s;
+}
+.film__content__container > p a {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+  color: black;
+}
+.film__content__container > p a::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #adb36e;
+  transition-duration: 0.3s;
+}
+.film__content__container > p a:hover::before {
+  width: 100%;
+}
+.film__content__container > span {
+  font-size: 0.5rem;
+  margin: 2px 0;
+}
+.film__content__container .film__delete {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  color: #FFFFFF;
+  width: 13px;
+  height: 13px;
+  line-height: 10px;
+  text-align: center;
+  bottom: 2px;
+  right: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
