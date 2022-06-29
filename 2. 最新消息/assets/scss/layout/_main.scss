@@ -1,0 +1,238 @@
+.main {
+	@extend %flex-center;
+	flex-direction: column;
+	font-weight: 700;
+	color:$color_secondary_golden;
+	max-width: 1280px;
+	margin: 0 auto 200px;
+	height: fit-content;
+
+.news-list{
+	width: 100%;
+	max-width: 1280px;
+}
+
+  .news-list__container{
+		position: relative;
+		width: 90%;
+		margin: auto;
+		display: flex;
+		@extend %flex-center;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.news-list__content-left{
+		@extend %flex-center;
+		flex-direction: column;
+		width: fit-content;
+		margin-top: 0px;
+	}
+
+	.news-list__content-right{
+		@extend %flex-center;
+		flex-direction: column;
+		width: fit-content;
+		margin-top: 176px;
+	}
+
+@media screen and (max-width: 1200px) {
+	.news-list__container{
+		align-items: flex-start;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.news-list__container{
+		transform: scale(0.6) translateY(-1000px);
+	}
+	.news-list__content-right{
+		margin-top: 0px;
+	}
+	.news-list{
+		height: 1750px;
+	}
+}
+
+	.news-list__item{
+		position: relative;
+		margin-bottom: 56px;
+		display: inline-flex;
+		box-sizing: border-box;
+		background-color: $color_secondary_white;
+		width: 500px;
+		height: 410px;
+		cursor: pointer;
+		*{
+			cursor: pointer;
+		}
+
+		&::before{
+			position: absolute;
+			top: -30px;
+			right: 0px;
+			color: #fff;
+			font-size: .8em;
+			background-color: $color_secondary_red;
+			opacity: 0%;
+			padding: 5px;
+			border-radius: 5px;
+			content: '連結僅示意';
+			transition-duration: 0.3s;
+		}
+
+		&:hover{
+			.img__container > img{
+				transform: scale(1.1,1.1);
+				filter: brightness(80%);
+			}
+			&::before{
+				opacity: 100%;
+			}
+		}
+	}
+	.img__container{
+		position: relative;
+		right: 32px;
+		overflow: hidden;
+		transition-duration: 0.3s;
+		img{
+			transition-duration: 0.3s;
+		}
+	}
+
+	a{
+		text-decoration: none;
+		left: 50px;
+	}
+	.news-thumbnail__detail{
+		display: flex;
+		flex-direction: column;
+	}
+	.news-thumbnail__title{
+		padding: 16px 12px 0;
+		margin-bottom: 12px;
+		font-family: Noto Sans;
+		font-size: 18px;
+		font-weight: 900;
+		line-height: 28px;
+		letter-spacing: 0.2%;
+		color: $color_secondary_black;
+	}
+
+	.news-thumbnail__time{
+		padding: 0 12px;
+		display: flex;
+		align-items: flex-end;
+		font-size: 16px;
+	font-weight: 300;
+	line-height: 16px;
+	letter-spacing: 0.2%;
+	color: gray;
+	}
+
+	@media(min-width: 768px){
+		.bounceInUp{
+			animation: bounceInUp;
+			animation-duration: 1s;
+			@keyframes bounceInUp {
+				from, 60%, 75%, 90%, to {
+					animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				}
+
+				from {
+					opacity: 0;
+					transform: translate3d(0, 3000px, 0);
+				}
+
+				60% {
+					opacity: 1;
+					transform: translate3d(0, -20px, 0);
+				}
+
+				75% {
+					transform: translate3d(0, 10px, 0);
+				}
+
+				90% {
+					transform: translate3d(0, -5px, 0);
+				}
+
+				to {
+					transform: translate3d(0, 0, 0);
+				}
+			}
+		}
+		.bounceInLeft{
+			animation: bounceInLeft;
+			animation-delay: 1s;
+			animation-duration: 1s;
+
+			@keyframes bounceInLeft {
+				from, 60%, 75%, 90%, to {
+					animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				}
+
+				0% {
+					opacity: 0;
+					transform: translate3d(-3000px, 0, 0);
+				}
+
+				60% {
+					opacity: 1;
+					transform: translate3d(25px, 0, 0);
+				}
+
+				75% {
+					transform: translate3d(-10px, 0, 0);
+				}
+
+				90% {
+					transform: translate3d(5px, 0, 0);
+				}
+
+				to {
+					transform: none;
+				}
+			}
+		}
+		.bounceInRight{
+			animation: bounceInRight;
+			animation-delay: 1s;
+			animation-duration: 1s;
+
+			@keyframes bounceInRight {
+				from, 60%, 75%, 90%, to {
+					animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				}
+
+				from {
+					opacity: 0;
+					transform: translate3d(3000px, 0, 0);
+				}
+
+				60% {
+					opacity: 1;
+					transform: translate3d(-25px, 0, 0);
+				}
+
+				75% {
+					transform: translate3d(10px, 0, 0);
+				}
+
+				90% {
+					transform: translate3d(-5px, 0, 0);
+				}
+
+				to {
+					transform: none;
+				}
+			}
+		}
+		.animation__delay-2500ms{
+			animation-delay: 2500ms;
+		}
+	}
+}
